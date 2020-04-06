@@ -15,12 +15,23 @@
     --color-grey-dark-2: #777;
     --color-grey-dark-3: #999;
 
+    // Border bottom
+
+    --line: 1px solid var(--color-grey-light-2);
+
     // Box Shadow
 
     --shadow-dark: 0 2rem 6rem rgba(0,0,0, .3);
+    --shadow-light: 0 2rem 5rem rgba(0, 0, 0, .06);
 
 }
 
+$bg-largest: 75em;   // 1200px / 16px = 75em
+$bg-large: 68.75em;  // 1100px / 16px = 68.75em
+$bg-medium: 56.25em; // 900px / 16px = 56.25em
+$bg-small: 43.75em;   // 700px / 16px = 43.75em
+$bg-smallest: 37.5em; // 600px / 16px = 37.5em
+$bg-mini: 28.125em; // 450px / 16px = 28.125em
 
 *{
     margin: 0;
@@ -36,6 +47,10 @@
 html{
     box-sizing: border-box;
     font-size: 62.5%;       // 1rem = 10px, 10/16 = 62.5% 
+
+    @media only screen and (max-width: $bg-large) {
+        font-size: 50%;     // 1rem = 10px, 8/16 = 50% 
+    }
 }
 
 body{
