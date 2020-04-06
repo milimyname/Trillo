@@ -762,7 +762,6 @@
     .navigation {
 
         display: block;
-
         &__input-checkbox {
             display: none;
         }
@@ -778,7 +777,7 @@
         }
 
         &__icon {
-            position: relative;
+            position: fixed;
             margin-top: 1.5rem;
             z-index: 40;
         }
@@ -811,12 +810,12 @@
         &__background{
             opacity: 0;
             visibility: hidden;
-            position: absolute;
+            position: fixed;
             right: 0rem;
             top: 0rem;
             background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
             z-index: 35;
-            height: 100%;
+            height: 100vh;
             width: 0;
             overflow: hidden;
             transform: translate(100%);
@@ -826,7 +825,7 @@
         &__menu {
             height: 100%;
             width: 60%;
-            position: absolute;
+            position: fixed;
             right: 0;
             top: 0;
             z-index: 40;
@@ -887,6 +886,7 @@
             color: #fff;
             text-align: center;
             position: absolute;
+            width: 60%;
             bottom: 5%;
             left: 50%;
             transform: translate(-50%, 5%);
@@ -912,7 +912,8 @@
             opacity: 1;
             visibility: visible;
             width: 60%;
-            transform: translate(0)
+            transform: translate(0);
+            height: 100vh;
         }
 
         &__input-checkbox:checked~&__menu {

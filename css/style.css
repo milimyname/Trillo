@@ -639,7 +639,7 @@ body {
       z-index: 41;
       outline: none; }
     .navigation__icon {
-      position: relative;
+      position: fixed;
       margin-top: 1.5rem;
       z-index: 40; }
     .navigation__icon, .navigation__icon::before, .navigation__icon::after {
@@ -659,12 +659,12 @@ body {
     .navigation__background {
       opacity: 0;
       visibility: hidden;
-      position: absolute;
+      position: fixed;
       right: 0rem;
       top: 0rem;
       background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
       z-index: 35;
-      height: 100%;
+      height: 100vh;
       width: 0;
       overflow: hidden;
       transform: translate(100%);
@@ -672,7 +672,7 @@ body {
     .navigation__menu {
       height: 100%;
       width: 60%;
-      position: absolute;
+      position: fixed;
       right: 0;
       top: 0;
       z-index: 40;
@@ -720,6 +720,7 @@ body {
       color: #fff;
       text-align: center;
       position: absolute;
+      width: 60%;
       bottom: 5%;
       left: 50%;
       transform: translate(-50%, 5%); }
@@ -737,7 +738,8 @@ body {
       opacity: 1;
       visibility: visible;
       width: 60%;
-      transform: translate(0); }
+      transform: translate(0);
+      height: 100vh; }
     .navigation__input-checkbox:checked ~ .navigation__menu {
       opacity: 1;
       visibility: visible;
