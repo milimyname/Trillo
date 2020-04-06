@@ -816,11 +816,80 @@
             top: 0rem;
             background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
             z-index: 35;
-            height: 100vh;
+            height: 100%;
             width: 0;
             overflow: hidden;
             transform: translate(100%);
             transition: all .5s;
+        }
+
+        &__menu {
+            height: 100%;
+            width: 60%;
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: 40;
+            opacity: 0;
+            visibility: hidden;
+            width: 0;
+            overflow: hidden;
+            transition: all .5s;
+        }
+
+        &__list{
+            list-style: none;
+            align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+        }
+
+        &__item{
+            margin: 1.5rem 0;
+            width: 100%;
+        }
+
+        &__link:visited,
+        &__link:link{
+            font-size: 2.6rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem 2rem;
+            background-image: linear-gradient(-120deg, transparent 0%, transparent 50%, #fff 50%);
+            background-size: 0%;
+            background-repeat: no-repeat;
+            backface-visibility: hidden;
+            transition: all .3s;
+
+            &:hover{
+                color: var(--color-primary);
+                background-size: 211%;
+            }
+        }
+
+        &__svg{
+            width: 3rem;
+            height: 3rem;
+            fill: currentColor;
+            margin-right: 2.5rem;
+        }
+
+        &__copyright{
+            font-size: 1.6rem;
+            color: #fff;
+            text-align: center;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translate(-50%, 5%);
         }
 
         &__input-checkbox:checked~&__button &__icon {
@@ -842,9 +911,18 @@
         &__input-checkbox:checked~&__background {
             opacity: 1;
             visibility: visible;
-            width: 50%;
+            width: 60%;
             transform: translate(0)
         }
+
+        &__input-checkbox:checked~&__menu {
+            opacity: 1;
+            visibility: visible;
+            width: 60%;
+        }
+        
+
+        
 
     }
 }
