@@ -38,6 +38,9 @@ body {
   background-size: cover;
   min-height: 100vh;
   line-height: 1.6; }
+  @media (hover: none) {
+    body {
+      -webkit-tap-highlight-color: transparent; } }
 
 .container {
   max-width: 120rem;
