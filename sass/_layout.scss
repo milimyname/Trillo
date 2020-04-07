@@ -70,6 +70,7 @@
 
     @media only screen and (max-width: $bg-small) {
         flex-direction: column;
+        padding-bottom: 0;
     }
 
     @media only screen and (max-width: $bg-mini) {
@@ -92,10 +93,11 @@
     @media only screen and (max-width: $bg-small) {
         margin-right: 0;
         margin-bottom: 3rem;
+        font-size: 1.8rem;
     }
 
     @media only screen and (max-width: $bg-mini) {
-        padding: 3rem;
+        padding: 2rem;
     }
 }
 
@@ -106,9 +108,9 @@
     flex-direction: column;
     align-items: center;
 
-    @media only screen and (max-width: $bg-mini) {
+    @media only screen and (max-width: $bg-small) {
         &:last-child{
-            margin-bottom: 3rem;
+            margin-bottom: 5rem;
         }
     }
 }

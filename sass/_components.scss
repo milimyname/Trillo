@@ -112,6 +112,10 @@
             padding: 1rem 1.5rem 1rem 2.2rem;
         }
 
+        @media only screen and (max-width: $bg-small) {
+            font-size: 1.4rem;
+        }
+
         &:hover {
             background-color: var(--color-grey-dark-1);
             color: #fff;
@@ -408,9 +412,8 @@
         letter-spacing: 1px;
 
         @media only screen and (max-width: $bg-smallest) {
-            font-size: 2rem;
+            font-size: 2.4rem;
             padding: 1rem 2rem;
-            font-weight: 700;
             margin-right: auto;
         }
     }
@@ -500,6 +503,10 @@
     cursor: pointer;
     transition: all .5s;
 
+    @media only screen and (max-width: $bg-smallest) {
+        font-size: 2.4rem;
+    }
+
     & span{
         margin-left: 3px;
         transition: margin-left .2s;
@@ -546,6 +553,7 @@
 .paragraph:not(:last-child) {
     margin-bottom: 2rem;
 }
+
 
 .list{
     list-style: none;
@@ -598,6 +606,10 @@
     display: flex;
     align-items: center;
 
+    @media only screen and (max-width: $bg-smallest) {
+        font-size: 1.6rem;
+    }
+
     &__paragraph{
         margin-right: auto;
     }
@@ -627,10 +639,8 @@
     position: relative;
 
     @media only screen and (max-width: $bg-small) {
-        &{
-            align-self: stretch;
-            margin-bottom:3rem;
-        }
+        align-self: stretch;
+        margin-bottom:5rem;
     }
 
 
@@ -638,6 +648,10 @@
         margin-bottom: 2rem;
         z-index: 2;
         position: relative;
+
+        @media only screen and (max-width: $bg-small) {
+            font-size: 1.8rem;
+        }
     }
 
     &__user{
@@ -651,6 +665,11 @@
         width: 4.5rem;
         border-radius: 50%;
         margin-right: 2rem;
+
+        @media only screen and (max-width: $bg-small) {
+            height: 6rem;
+            width: 6rem;
+        }
     }
 
     &__user-box{
@@ -660,15 +679,25 @@
     &__user-name{
         font-weight: 700;
         text-transform: uppercase;
+        @media only screen and (max-width: $bg-small) {
+            font-size: 1.6rem;
+        }
     }
 
     &__user-date{
         font-size: .9rem;
+        @media only screen and (max-width: $bg-small) {
+            font-size: 1.4rem;
+        }
     }
 
     &__rating{
         font-size: 2.2rem;
         color: var(--color-primary);
+
+        @media only screen and (max-width: $bg-small) {
+            font-size: 3.2rem;
+        }
     }
 
     &::before{
@@ -697,6 +726,10 @@
         text-transform: uppercase;
         letter-spacing: 1px;
         margin-bottom: 2.5rem;
+
+        @media only screen and (max-width: $bg-smallest) {
+            padding: 0 2rem;
+        }
     }
 }
 
@@ -774,6 +807,19 @@
             width: 3rem;
             z-index: 41;
             outline: none;
+
+            &::before{
+                content: "";
+                background-color: #fff;
+                width: 5rem;
+                height: 5rem;
+                display: inline-block;
+                border-radius: 30%;
+                box-shadow: var(--shadow-light);
+                position: fixed;
+                top: .5rem;
+                right: .5rem;
+            }
         }
 
         &__icon {
@@ -892,6 +938,10 @@
             transform: translate(-50%, 5%);
         }
 
+        &__input-checkbox:checked~&__button::before {
+            display: none;
+        }
+
         &__input-checkbox:checked~&__button &__icon {
             background-color: transparent;
         }
@@ -921,9 +971,5 @@
             visibility: visible;
             width: 60%;
         }
-        
-
-        
-
     }
 }

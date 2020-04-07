@@ -93,7 +93,8 @@ body {
       padding: 3rem; } }
   @media only screen and (max-width: 43.75em) {
     .detail {
-      flex-direction: column; } }
+      flex-direction: column;
+      padding-bottom: 0; } }
   @media only screen and (max-width: 28.125em) {
     .detail {
       padding: 0; } }
@@ -111,19 +112,20 @@ body {
   @media only screen and (max-width: 43.75em) {
     .description {
       margin-right: 0;
-      margin-bottom: 3rem; } }
+      margin-bottom: 3rem;
+      font-size: 1.8rem; } }
   @media only screen and (max-width: 28.125em) {
     .description {
-      padding: 3rem; } }
+      padding: 2rem; } }
 
 .testimonials {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center; }
-  @media only screen and (max-width: 28.125em) {
+  @media only screen and (max-width: 43.75em) {
     .testimonials:last-child {
-      margin-bottom: 3rem; } }
+      margin-bottom: 5rem; } }
 
 .logo {
   height: 3.25rem;
@@ -205,6 +207,9 @@ body {
     padding: 2rem 1.5rem 1rem 2.2rem; }
     .list-suggestions__item:not(:first-child) {
       padding: 1rem 1.5rem 1rem 2.2rem; }
+    @media only screen and (max-width: 43.75em) {
+      .list-suggestions__item {
+        font-size: 1.4rem; } }
     .list-suggestions__item:hover {
       background-color: var(--color-grey-dark-1);
       color: #fff; }
@@ -398,9 +403,8 @@ body {
     letter-spacing: 1px; }
     @media only screen and (max-width: 37.5em) {
       .overview__heading {
-        font-size: 2rem;
+        font-size: 2.4rem;
         padding: 1rem 2rem;
-        font-weight: 700;
         margin-right: auto; } }
   .overview__stars {
     margin-right: auto; }
@@ -460,6 +464,9 @@ body {
   padding-bottom: 2px;
   cursor: pointer;
   transition: all .5s; }
+  @media only screen and (max-width: 37.5em) {
+    .btn-line {
+      font-size: 2.4rem; } }
   .btn-line span {
     margin-left: 3px;
     transition: margin-left .2s; }
@@ -524,6 +531,9 @@ body {
   color: var(--color-grey-dark-3);
   display: flex;
   align-items: center; }
+  @media only screen and (max-width: 37.5em) {
+    .recommend {
+      font-size: 1.6rem; } }
   .recommend__paragraph {
     margin-right: auto; }
   .recommend__friends {
@@ -545,11 +555,14 @@ body {
   @media only screen and (max-width: 43.75em) {
     .review {
       align-self: stretch;
-      margin-bottom: 3rem; } }
+      margin-bottom: 5rem; } }
   .review__text {
     margin-bottom: 2rem;
     z-index: 2;
     position: relative; }
+    @media only screen and (max-width: 43.75em) {
+      .review__text {
+        font-size: 1.8rem; } }
   .review__user {
     display: flex;
     align-items: center; }
@@ -558,16 +571,29 @@ body {
     width: 4.5rem;
     border-radius: 50%;
     margin-right: 2rem; }
+    @media only screen and (max-width: 43.75em) {
+      .review__img {
+        height: 6rem;
+        width: 6rem; } }
   .review__user-box {
     margin-right: auto; }
   .review__user-name {
     font-weight: 700;
     text-transform: uppercase; }
+    @media only screen and (max-width: 43.75em) {
+      .review__user-name {
+        font-size: 1.6rem; } }
   .review__user-date {
     font-size: .9rem; }
+    @media only screen and (max-width: 43.75em) {
+      .review__user-date {
+        font-size: 1.4rem; } }
   .review__rating {
     font-size: 2.2rem;
     color: var(--color-primary); }
+    @media only screen and (max-width: 43.75em) {
+      .review__rating {
+        font-size: 3.2rem; } }
   .review::before {
     content: "\201C";
     position: absolute;
@@ -588,6 +614,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 2.5rem; }
+    @media only screen and (max-width: 37.5em) {
+      .cta__heading {
+        padding: 0 2rem; } }
 
 .btn {
   font-size: 1.4;
@@ -638,6 +667,17 @@ body {
       width: 3rem;
       z-index: 41;
       outline: none; }
+      .navigation__button::before {
+        content: "";
+        background-color: #fff;
+        width: 5rem;
+        height: 5rem;
+        display: inline-block;
+        border-radius: 30%;
+        box-shadow: var(--shadow-light);
+        position: fixed;
+        top: .5rem;
+        right: .5rem; }
     .navigation__icon {
       position: fixed;
       margin-top: 1.5rem;
@@ -724,6 +764,8 @@ body {
       bottom: 5%;
       left: 50%;
       transform: translate(-50%, 5%); }
+    .navigation__input-checkbox:checked ~ .navigation__button::before {
+      display: none; }
     .navigation__input-checkbox:checked ~ .navigation__button .navigation__icon {
       background-color: transparent; }
     .navigation__input-checkbox:checked ~ .navigation__button .navigation__icon::before {
